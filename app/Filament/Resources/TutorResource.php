@@ -43,10 +43,10 @@ class TutorResource extends Resource implements ResourceInterface
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make('edit'),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                Tables\Actions\DeleteBulkAction::make('delete'),
                 TutorBulkRateChangeUpdateAction::make('updateHourlyRates'),
             ]);
     }

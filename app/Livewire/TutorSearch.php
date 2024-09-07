@@ -25,7 +25,7 @@ class TutorSearch extends Component
     public function __construct()
     {
         $this->tutorService = new TutorService;
-        $this->maxHourlyRate = $this->tutorService->getMinAndMaxRates();
+        $this->maxHourlyRate = $this->tutorService->getMaxRateTutor();
 
     }
 

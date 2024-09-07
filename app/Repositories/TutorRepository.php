@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class TutorRepository extends BaseRepository
 {
-    public function getTotalActiveTutors()
+    public function getTotalActiveTutors(): int
     {
         return $this->model->whereJsonLength('subjects', '>', 0)->count();
     }
@@ -17,11 +17,6 @@ class TutorRepository extends BaseRepository
     public function getAverageHourlyRate()
     {
         return $this->model->whereJsonLength('subjects', '>', 0)->avg('hourly_rate');
-    }
-
-    public function getMinRateTutor(): ?Model
-    {
-        return $this->model->whereJsonLength('subjects', '>', 0)->orderBy('hourly_rate')->first();
     }
 
     public function getMaxRateTutor(): ?Model

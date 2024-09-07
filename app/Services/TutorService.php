@@ -68,7 +68,7 @@ class TutorService
         }
     }
 
-    public function getMinAndMaxRates(): int|float
+    public function getMaxRateTutor(): int|float
     {
         return $this->repository->getMaxRateTutor()?->hourly_rate ?? 0;
     }

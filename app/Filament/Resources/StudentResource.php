@@ -39,12 +39,12 @@ class StudentResource extends Resource implements ResourceInterface
                 //
             ])
             ->actions([
-                Tables\Actions\CreateAction::make(),
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\CreateAction::make('create'),
+                Tables\Actions\EditAction::make('edit'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make('delete'),
                 ]),
             ]);
     }
